@@ -1,0 +1,59 @@
+/*  <---------FONTS--------->
+    Montserrat
+    https://bestfonts.pro/font/montserrat
+    @import 'fonts-include/_montserrat.scss';
+
+    
+*/
+
+
+@import 'fonts-include/_montserrat.scss';
+@import 'fonts-include/_poppins.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    //sizes
+    width: 100%;
+    min-height: 100%;
+}
+body{
+    //display
+    display: flex;
+    flex-direction: column;
+    
+    //sizes
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    //font-family: $font-family;
+
+}
+
+.section{
+    //display
+    display: flex;
+
+    //sizes
+    width: 100%;
+
+    &__inner{
+        //display
+        display: flex;
+        flex-direction: column;
+        
+        //sizes
+        width: 100%;
+        max-width: 1280px;
+        
+        //padding
+        padding: 50px 0;
+
+        //margin
+        margin: 0; 
+    }
+}
