@@ -9,6 +9,10 @@
 
 @import 'fonts-include/_montserrat.scss';
 @import 'fonts-include/_poppins.scss';
+@import 'fonts-include/_opensans.scss';
+
+$black-text: #2D2D2D;
+
 *{
     margin: 0;
     padding: 0;
@@ -21,17 +25,28 @@ html{
     width: 100%;
     min-height: 100%;
 }
+
+/* BEGIN: Common styles*/
 body{
     //display
-    display: flex;
-    flex-direction: column;
-    
+    display: flex;    
     //sizes
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    //font-family: $font-family;
+    background: #E5E5E5;
 
+
+    font-family: $font-poppins;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 0 50px 0 65px;
 }
 
 .section{
@@ -41,19 +56,74 @@ body{
     //sizes
     width: 100%;
 
-    &__inner{
-        //display
-        display: flex;
-        flex-direction: column;
-        
-        //sizes
-        width: 100%;
-        max-width: 1280px;
-        
-        //padding
-        padding: 50px 0;
-
-        //margin
-        margin: 0; 
-    }
+    
 }
+.section__inner{
+    //display
+    display: flex;
+    flex-direction: column;
+    
+    //sizes
+    width: 100%;
+    max-width: 1280px;
+    
+    //padding
+    padding: 50px 0;
+
+    //margin
+    margin: 0; 
+}
+
+/* END: Common styles*/
+
+/*BEGIN: sidebar*/
+
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.sidebar__inner{
+
+}
+
+
+.logo{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__img{
+
+}
+
+.logo__text{
+    font-family: $font-opensans;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $black-text;
+}
+
+/*END: sidebar*/
+
+/*BEGIN: header*/
+
+/*END: header*/
+
+
+
+/*
+    USED FONTS
+
+    Poppins:
+
+    Montserrat:
+
+    OpenSans: 
+        bold, 700
+
+*/
