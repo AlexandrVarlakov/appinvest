@@ -365,7 +365,7 @@ body {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 0 50px 0 65px; }
+  padding: 33px 50px 0 65px; }
 
 .section {
   display: -webkit-box;
@@ -389,13 +389,79 @@ body {
   padding: 50px 0;
   margin: 0; }
 
+.page-title {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #2D2D2D; }
+
 /* END: Common styles*/
 /*BEGIN: sidebar*/
 .sidebar {
   width: 200px;
   height: 100vh;
   background-color: #fff;
-  border-radius: 0px 30px 30px 0px; }
+  border-radius: 0 30px 30px 0px;
+  padding: 14vh 15px 0;
+  min-height: 640px; }
+
+.sidebar__nav {
+  padding: 9vh 0 16vh; }
+  @media (max-height: 775px) {
+    .sidebar__nav {
+      padding: 9vh 0; } }
+
+.menu {
+  list-style: none; }
+
+.menu__item {
+  border-radius: 12px;
+  -webkit-transition: .3s background;
+  -o-transition: .3s background;
+  transition: .3s background; }
+  .menu__item:hover {
+    background-color: #E9EAEC; }
+
+.menu__icon-wrap {
+  margin-right: 25px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.menu__link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 13px 8px 13px 16px;
+  color: #2D2D2D; }
+
+.menu__item_active {
+  background: #F5F7F9; }
+  .menu__item_active .menu__link-text {
+    font-weight: bold; }
 
 .logo {
   display: -webkit-box;
@@ -406,7 +472,12 @@ body {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .logo__text {
   font-family: "Open Sans";
@@ -416,14 +487,107 @@ body {
   text-align: center;
   color: #2D2D2D; }
 
+.visual-regime-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.visual-regime {
+  width: 64px;
+  height: 36px;
+  background: rgba(45, 45, 45, 0.85);
+  border: 2px solid rgba(45, 45, 45, 0.85);
+  border-radius: 40px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.visual-regime__round {
+  width: 32px;
+  height: 32px;
+  background: #F7F7FC;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  -webkit-transition: left 0.5s,  right 0.5s,  background 1s;
+  -o-transition: left 0.5s,  right 0.5s,  background 1s;
+  transition: left 0.5s,  right 0.5s,  background 1s; }
+
+.visual-regime_dark {
+  background-color: #F7F7FC; }
+  .visual-regime_dark .visual-regime__round {
+    right: 28px;
+    background: rgba(45, 45, 45, 0.85); }
+
 /*END: sidebar*/
 /*BEGIN: header*/
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 65px 0; }
+
+.userbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.userbar__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .3s background;
+  -o-transition: .3s background;
+  transition: .3s background; }
+  .userbar__button:not(:first-of-type) {
+    margin-left: 25px; }
+  .userbar__button:hover {
+    background-color: #f4f4f4; }
+
 /*END: header*/
 /*
     USED FONTS
 
     Poppins:
-
+        400, bold
+        700, bold
     Montserrat:
 
     OpenSans: 
