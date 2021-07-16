@@ -16,3 +16,24 @@ visualRegime.onclick = function(){
 }
 
 /*********************************************************************/
+
+let hamburger = document.querySelector('.hamburger');
+let sidebar = document.querySelector('.sidebar');
+let hide_sidebar = document.querySelector('.hide-sidebar-btn');
+let modal_fog = document.querySelector('.modal-fog');
+
+hamburger.onclick = function(){
+    sidebar.classList.toggle('sidebar_show-mob');
+    modal_fog.classList.toggle('modal-fog_show');
+}
+
+hide_sidebar.onclick = function(){
+    sidebar.classList.toggle('sidebar_show-mob');
+    modal_fog.classList.toggle('modal-fog_show');
+}
+
+
+window.onresize = function(){
+    modal_fog.classList.remove('modal-fog_show');
+    sidebar.classList.remove('sidebar_show-mob');
+}
