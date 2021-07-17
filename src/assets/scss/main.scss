@@ -761,6 +761,31 @@ body{
     }
 }
 
+.filter-col{
+    @media (max-width: 1120px){
+        display: none;
+    }
+    
+}
+
+.filter-mob{
+    min-width: 50px;
+    height: 50px;
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 160px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    cursor: pointer;
+    
+    margin-left: 10px;
+    @media (max-width: 1120px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 .filter{
     display: flex;
     align-items: center;
@@ -1149,6 +1174,16 @@ body{
     color: #12121F;
 }
 
+.stock-col{
+    @media (max-width: 1120px){
+        width: 65%;
+    }
+    @media (max-width: 960px){
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
 /*Begin: search form*/
 .search{
     display: flex;
@@ -1156,16 +1191,40 @@ body{
     align-items: center;
     border-radius: 20px;
     padding: 12.5px 25px;
+
+    @media (max-width: 1120px){
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
 .search__icon{
     display: flex;
     align-items: center;
+
+    @media (max-width: 1120px){
+        background-color: #fff;
+        min-width: 50px;
+        height: 50px;
+        justify-content: center;
+
+        box-shadow: 0px 4px 160px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        margin-right: 10px;
+    }
 }
 
 
 .search__form{
     flex-grow: 1;
+
+    @media(max-width: 1120px){
+        height: 50px;
+        background: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+    }
 }
 .search__input{
     width: 100%;
@@ -1188,7 +1247,9 @@ body{
     }
 
 
-
+    @media (max-width: 1120px){
+        padding-right: 30px;
+    }
 
 }
 
@@ -1224,6 +1285,10 @@ body{
 
     padding: 10px 30px;
     border-radius: 24px;
+
+    @media (max-width: 640px){
+        padding: 10px 15px;
+    }
 }
 .s-index__percent{
     display: flex;
@@ -1292,12 +1357,21 @@ body{
     line-height: 20px;
     letter-spacing: 0.25px;
     color: #12121F;
-}
 
+    
+}
+.s-index__company-value{
+    @media (max-width: 540px){
+        display: none;
+    }
+}
 .s-index__risk-block{
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    @media (max-width: 540px){
+        display: none;
+    }
 }
 .hight-risk{
     background-color: #FF0000;
@@ -1311,6 +1385,13 @@ body{
     background-color: #6AC579;
 }
 
+
+
+.market-3st-col{
+    @media (max-width: 960px) {
+        display: none;
+    }
+}
 
 .market-offer{
     margin-top: 30px;
