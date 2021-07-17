@@ -1188,8 +1188,6 @@ body {
   padding-top: 7px; }
 
 .payment-wrap {
-  padding-bottom: 10px;
-  background-color: #C4C4C4;
   border-radius: 24px 24px 0 0; }
 
 .payment-card {
@@ -1480,17 +1478,286 @@ body {
 .pages-1st-col {
   width: 18.65%;
   min-width: 230px;
-  background-color: indianred; }
+  /*background-color: indianred;*/ }
 
 .pages-2st-col {
   width: 41.2%;
   min-width: 510px;
-  background-color: orangered; }
+  /*background-color: orangered;*/ }
 
 .pages-3st-col {
   width: 24.23%;
   min-width: 300px;
-  background-color: salmon; }
+  /*background-color: salmon;*/ }
+
+.filters-list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 0;
+  cursor: pointer;
+  position: relative; }
+  .filters-list__item:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    opacity: 0.05;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    bottom: 0; }
+
+.filters-list__name {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #12121F; }
+
+/*Begin: search form*/
+.search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  padding: 12.5px 25px; }
+
+.search__icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.search__form {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.search__input {
+  width: 100%;
+  color: #12121F;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 30px;
+  letter-spacing: 0.25px;
+  border: none;
+  outline: none; }
+  .search__input:focus {
+    border: none; }
+  .search__input::-webkit-input-placeholder {
+    color: #585858; }
+  .search__input::-moz-placeholder {
+    color: #585858; }
+  .search__input:-ms-input-placeholder {
+    color: #585858; }
+  .search__input::-ms-input-placeholder {
+    color: #585858; }
+  .search__input::placeholder {
+    color: #585858; }
+
+.page-card_statistic {
+  padding-left: 30px;
+  padding-top: 12px; }
+
+.page-card__title {
+  font-size: 16px;
+  line-height: 20px; }
+
+.sv_market {
+  font-size: 30px;
+  line-height: 37px; }
+
+.page-card__body_statistic {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+/*END: search form*/
+.s-index {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  margin-top: 25px;
+  padding: 10px 30px;
+  border-radius: 24px; }
+
+.s-index__percent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  border-radius: 10px; }
+
+.s-index__percent_up-trand {
+  background-color: #C8C7F2; }
+  .s-index__percent_up-trand .s-index__trand-arrow {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.s-index__percent_down-trand {
+  background-color: #FFA3A3; }
+  .s-index__percent_down-trand .s-index__trand-arrow {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+.company-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.s-index__company-name {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #12121F; }
+
+.s-index__company-trand {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #AFAFBD; }
+
+.s-index__percent-value {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #12121F;
+  padding-left: 10px; }
+
+.s-index__trand-arrow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.s-index__company-value, .s-index__stock-value {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #12121F; }
+
+.s-index__risk-block {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%; }
+
+.hight-risk {
+  background-color: #FF0000; }
+
+.middle-risk {
+  background-color: #FFDE30; }
+
+.low-risk {
+  background-color: #6AC579; }
+
+.market-offer {
+  margin-top: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  padding-bottom: 30px; }
+
+.market-offer__title {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #14142B;
+  max-width: 184px;
+  margin-bottom: 10px; }
+
+.market-offer__btn {
+  border: 2px solid #D6D8E7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 46px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #2D2D2D;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .market-offer__btn:hover {
+    border-color: #AFAFAF; }
 
 /*
     USED FONTS
