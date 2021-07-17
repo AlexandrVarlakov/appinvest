@@ -281,3 +281,23 @@
     }
   }
 }
+
+.portfolio-chart-container{
+  .ct-line{
+    stroke-width: 3px;
+  }
+
+  .ct-series-a{
+    .ct-area{
+      fill: #999999;
+    }
+    .ct-line{
+      stroke: #999999;
+      filter: none;
+    }
+  } 
+
+  .ct-grids{
+    display: block;
+  }
+}

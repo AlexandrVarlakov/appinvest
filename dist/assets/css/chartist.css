@@ -639,3 +639,17 @@
   stroke: #B993D6;
   -webkit-filter: drop-shadow(0px 7px 7px #B993D6);
           filter: drop-shadow(0px 7px 7px #B993D6); }
+
+.portfolio-chart-container .ct-line {
+  stroke-width: 3px; }
+
+.portfolio-chart-container .ct-series-a .ct-area {
+  fill: #999999; }
+
+.portfolio-chart-container .ct-series-a .ct-line {
+  stroke: #999999;
+  -webkit-filter: none;
+          filter: none; }
+
+.portfolio-chart-container .ct-grids {
+  display: block; }

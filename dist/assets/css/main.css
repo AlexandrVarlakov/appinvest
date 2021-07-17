@@ -425,7 +425,11 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 50px; }
+  @media (max-width: 640px) {
+    .page-content {
+      padding-bottom: 100px; } }
 
 @media (max-width: 1120px) {
   .page-content_main {
@@ -1682,6 +1686,48 @@ body {
     .s-index {
       padding: 10px 15px; } }
 
+.s-index_portfolio {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0; }
+
+.s-index__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 30px;
+  background-color: #fff; }
+
+.s-index__row_footer {
+  border-radius: 0 0 24px 24px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0px 30px 25px; }
+
 .s-index__percent {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1738,6 +1784,10 @@ body {
   color: #12121F;
   padding-left: 10px; }
 
+.s-index__percent-value_p {
+  font-size: 13px;
+  line-height: 13px; }
+
 .s-index__trand-arrow {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1748,13 +1798,17 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
-.s-index__company-value, .s-index__stock-value {
+.s-index__company-value, .s-index__stock-value, .s-index__pt, .s-index__profit {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 10px;
   line-height: 20px;
   letter-spacing: 0.25px;
   color: #12121F; }
+
+.s-index__pt, .s-index__profit {
+  font-size: 13px;
+  line-height: 13px; }
 
 @media (max-width: 540px) {
   .s-index__company-value {
@@ -1843,6 +1897,164 @@ body {
   transition: .5s; }
   .market-offer__btn:hover {
     border-color: #AFAFAF; }
+
+.portfolio-chart-container {
+  width: 100%;
+  padding: 0 30px;
+  height: 145px; }
+
+.btn-sell {
+  width: 100px;
+  height: 25px;
+  background: #F5F7F9;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #12121F;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .btn-sell:hover {
+    background-color: #DCDCDC; }
+
+.portfolio-menu {
+  background-color: #fff;
+  padding: 12.5px 20px;
+  border-radius: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (max-width: 960px) {
+    .portfolio-menu {
+      height: 50px;
+      width: 300px;
+      margin-right: 20px; } }
+  @media (max-width: 659px) {
+    .portfolio-menu {
+      margin-right: 0px;
+      margin-bottom: 20px;
+      width: 100%; } }
+
+.portfolio-menu__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.portfolio-menu__item {
+  margin: 0 20px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border-radius: 12px; }
+  .portfolio-menu__item:hover {
+    background-color: #DCDCDC; }
+
+.portfolio-menu__link {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #373737;
+  text-decoration: none;
+  padding: 10px 20px; }
+
+.portfolio-menu__item_active {
+  background: #F5F7F9;
+  border-radius: 12px; }
+
+.portfolio-total {
+  padding: 16px 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  border-radius: 12px;
+  font-family: "Poppins";
+  font-weight: 600;
+  color: #000000; }
+  @media (max-width: 960px) {
+    .portfolio-total {
+      height: 50px;
+      margin-top: 0;
+      width: 300px; } }
+  @media (max-width: 659px) {
+    .portfolio-total {
+      width: 100%; } }
+
+.portfolio-total__title {
+  font-size: 20px;
+  line-height: 24px; }
+
+.portfolio-total__value {
+  font-size: 16px;
+  line-height: 38px;
+  margin-left: 15px; }
+
+.portfolio-total__incriment {
+  font-size: 10px;
+  line-height: 34px;
+  color: #00BA88;
+  margin-left: 10px; }
+
+@media (max-width: 960px) {
+  .portfolio_stock-col {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; } }
+
+@media (max-width: 960px) {
+  .portfolio-3st-col {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+
+@media (max-width: 659px) {
+  .portfolio-3st-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 /*
     USED FONTS

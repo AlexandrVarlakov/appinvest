@@ -108,6 +108,10 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    padding-bottom: 50px;
+    @media (max-width: 640px){
+        padding-bottom: 100px;
+    }
 }
 
 .page-content_main{
@@ -1290,6 +1294,31 @@ body{
         padding: 10px 15px;
     }
 }
+
+.s-index_portfolio{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+}
+
+
+.s-index__row{
+    display: flex;
+    width: 100%;
+    border-radius: 24px 24px 0 0 ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background-color: #fff;
+}
+
+.s-index__row_footer{
+    border-radius: 0 0 24px 24px;
+    justify-content: flex-end;
+    padding: 0px 30px 25px;
+}
+
 .s-index__percent{
     display: flex;
     padding: 5px;
@@ -1345,12 +1374,19 @@ body{
     color: #12121F;
     padding-left: 10px;
 }
+
+.s-index__percent-value_p{
+    font-size: 13px;
+    line-height: 13px;
+}
+
+
 .s-index__trand-arrow{
     display: flex;
     align-items: center;
     
 }
-.s-index__company-value, .s-index__stock-value{
+.s-index__company-value, .s-index__stock-value, .s-index__pt, .s-index__profit{
     font-family: $font-montserrat;
     font-weight: 600;
     font-size: 10px;
@@ -1359,6 +1395,11 @@ body{
     color: #12121F;
 
     
+}
+
+.s-index__pt, .s-index__profit{
+    font-size: 13px;
+    line-height: 13px;
 }
 .s-index__company-value{
     @media (max-width: 540px){
@@ -1443,6 +1484,156 @@ body{
 
     &:hover{
         border-color: #AFAFAF;
+    }
+}
+
+.portfolio-chart-container{
+    width: 100%;
+    padding: 0 30px;
+    height: 145px;
+}
+
+.btn-sell{
+    width: 100px;
+    height: 25px;
+    background: #F5F7F9;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: $font-montserrat;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #12121F;
+
+    transition: .5s;
+
+    &:hover{
+        background-color: #DCDCDC;
+    }
+
+
+}
+
+
+.portfolio-menu{
+    background-color: #fff;
+    padding: 12.5px 20px ;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media(max-width: 960px){
+        height: 50px;
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    @media(max-width: 659px){
+        margin-right: 0px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+.portfolio-menu__list{
+    list-style: none;
+    display: flex;
+}
+
+.portfolio-menu__item{
+    margin: 0 20px;
+    transition: .5s;
+    border-radius: 12px;
+    &:hover{
+        background-color: #DCDCDC;
+    }
+}
+
+.portfolio-menu__link{
+    font-family: $font-montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #373737;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+    
+}
+
+.portfolio-menu__item_active{
+    
+    background: #F5F7F9;
+    border-radius: 12px;
+    
+}
+
+.portfolio-total{
+    padding: 16px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    border-radius: 12px;
+
+    font-family: $font-poppins;
+    font-weight: 600;
+    color: #000000;
+    @media(max-width: 960px){
+        height: 50px;
+        margin-top: 0;
+        width: 300px;
+    }
+
+    @media(max-width: 659px){
+        width: 100%;
+    }
+}
+
+.portfolio-total__title{
+    
+    font-size: 20px;
+    line-height: 24px;
+    
+}
+
+.portfolio-total__value{
+    font-size: 16px;
+    line-height: 38px; 
+    margin-left: 15px;
+}
+
+.portfolio-total__incriment{
+    font-size: 10px;
+    line-height: 34px; 
+    color: #00BA88;
+    margin-left: 10px;
+}
+
+.portfolio_stock-col{
+    @media(max-width: 960px){
+        order: 2;   
+    }
+    
+}
+.portfolio-3st-col{
+    @media(max-width: 960px){
+        order: 1;    
+        display: flex;
+        margin-bottom: 30px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media(max-width: 659px){
+        flex-direction: column;
     }
 }
 /*
