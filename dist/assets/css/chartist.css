@@ -632,10 +632,10 @@
   -webkit-filter: drop-shadow(0px 7px 7px #FE7C6F);
           filter: drop-shadow(0px 7px 7px #FE7C6F); }
 
-.small-chart_down-trand .ct-series-a .ct-area {
+.small-chart_up-trand .ct-series-a .ct-area {
   fill: #B993D6; }
 
-.small-chart_down-trand .ct-series-a .ct-line {
+.small-chart_up-trand .ct-series-a .ct-line {
   stroke: #B993D6;
   -webkit-filter: drop-shadow(0px 7px 7px #B993D6);
           filter: drop-shadow(0px 7px 7px #B993D6); }

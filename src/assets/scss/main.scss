@@ -121,8 +121,25 @@ body{
     }
     
 }
+.page-content_other{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+}
 
 
+.page-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &:not(:first-of-type){
+        margin-top: 25px;
+    }
+}
 
 /* END: Common styles*/
 
@@ -575,13 +592,21 @@ body{
 
 
 }
-.down-trand{
-    transform: rotate(180deg);
+.up-trand{
+    transform: rotate(0deg);
     path{
-        fill: #B993D6;
+        fill: #B993D6 !important;
 
     }
     
+}
+
+.down-trand{
+    transform: rotate(180deg);
+    path{
+        
+        fill: #FE7C6F !important;
+    }
 }
 
 
@@ -606,7 +631,16 @@ body{
         padding: 25px;
     }
 }
-
+.page-card_slim{
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    .page-card__header{
+        align-items: center;
+    }
+    @media (max-width: 460px){
+        padding: 7.5px 20px;
+    }
+}
 .page-card_small{
     padding: 10px 32px;
     flex-direction: row;
@@ -664,19 +698,20 @@ body{
     display: flex;
     align-items: center;
 }
-.statistic_trand-up{
+.statistic_trand-down{
     color: #FE7C6F;
+    transform: rotate(180deg);
     path{
         fill: #FE7C6F;
 
     }
 }
 
-.statistic_trand-down{
+.statistic_trand-up{
     color: #B993D6;
     .statistic__percent-trand{
 
-        transform: rotate(180deg);
+        
 
         path{
             fill: #B993D6;
@@ -724,6 +759,28 @@ body{
     &:hover{
         border: 1px solid #999;
     }
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 7.5px;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.filter__btn{
+    font-family: $font-montserrat;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #585858;
+    margin-right: 5px;
+}
+.filter__arrow{
+    transform: rotate(270deg);
 }
 
 .time-filter__current-value{
@@ -1040,6 +1097,22 @@ body{
 }
 
 /* КОНЕЦ: 3-яя колонка главной страницы*/
+
+.pages-1st-col{
+    width: 18.65%;
+    min-width: 230px;
+    background-color: indianred;
+}
+.pages-2st-col{
+    width: 41.2%;
+    min-width: 510px;
+    background-color: orangered;
+}
+.pages-3st-col{
+    width: 24.23%;
+    min-width: 300px;
+    background-color: salmon;
+}
 
 
 
