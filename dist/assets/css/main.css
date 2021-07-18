@@ -366,7 +366,7 @@ body {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 33px 50px 0 65px; }
+  padding: 33px 50px 0 265px; }
   @media (max-width: 1380px) {
     .content {
       padding: 33px 30px 0 30px; } }
@@ -472,25 +472,28 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   width: 100%; }
   .page-row:not(:first-of-type) {
     margin-top: 25px; }
+
+.portfolio-row {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
 /* END: Common styles*/
 /*BEGIN: sidebar*/
 .sidebar {
   width: 200px;
-  height: 100vh;
   background-color: #fff;
   border-radius: 0 30px 30px 0px;
+  position: fixed;
   padding: 14vh 15px 0;
+  height: 100vh;
   min-height: 640px; }
   @media (max-width: 1380px) {
     .sidebar {
-      position: absolute;
+      position: fixed;
       -webkit-transform: translateX(-100%);
           -ms-transform: translateX(-100%);
               transform: translateX(-100%);
@@ -856,7 +859,14 @@ body {
 .mpage-1st-col {
   /*width: 33.33%;*/
   width: 45%;
-  min-width: 375px; }
+  min-width: 375px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 5;
+      -ms-flex-negative: 5;
+          flex-shrink: 5; }
   @media (max-width: 1600px) {
     .mpage-1st-col {
       width: 40%; } }
@@ -873,7 +883,8 @@ body {
       padding-bottom: 30px; } }
 
 .mpage-2st-col {
-  width: 445px; }
+  width: 445px;
+  margin: 0 20px; }
   @media (max-width: 900px) {
     .mpage-2st-col {
       -webkit-box-ordinal-group: 2;
@@ -881,7 +892,8 @@ body {
           -ms-flex-order: 1;
               order: 1;
       margin-bottom: 30px;
-      width: 100%; } }
+      width: 100%;
+      margin: 0  0 20px 0; } }
 
 /*END: Main page*/
 .popular-wallets {
@@ -1471,7 +1483,7 @@ body {
 /* 3-яя колонка главной страницы*/
 .mpage-3st-col {
   width: 17.8%;
-  min-width: 200px; }
+  width: 200px; }
   @media (max-width: 1120px) {
     .mpage-3st-col {
       display: none; } }
@@ -1516,7 +1528,19 @@ body {
 .pages-2st-col {
   width: 41.2%;
   min-width: 510px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 20px;
   /*background-color: orangered;*/ }
+  @media (max-width: 960px) {
+    .pages-2st-col {
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      margin: 0 0px; } }
 
 .pages-3st-col {
   width: 24.23%;

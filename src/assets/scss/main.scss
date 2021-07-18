@@ -46,7 +46,7 @@ body{
     flex-direction: column;
     flex-grow: 1;
 
-    padding: 33px 50px 0 65px;
+    padding: 33px 50px 0 265px;
 
     @media (max-width: 1380px){
         padding: 33px 30px 0 30px;
@@ -137,30 +137,32 @@ body{
 .page-row{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     width: 100%;
 
     &:not(:first-of-type){
         margin-top: 25px;
     }
 }
-
+.portfolio-row{
+    flex-wrap: wrap;
+}
 /* END: Common styles*/
 
 /*BEGIN: sidebar*/
 
 .sidebar{
     width: 200px;
-    height: 100vh;
+    
     background-color: #fff;
     border-radius: 0 30px 30px 0px;
-
+    position: fixed;
     padding: 14vh 15px 0;
-
+    height: 100vh;
     min-height: 640px;
-
+    
     @media (max-width: 1380px){
-        position: absolute;
+        position: fixed;
         transform: translateX(-100%);
         z-index: 999;
         transition: .5s;
@@ -169,6 +171,8 @@ body{
         min-height: 680px;
     }
 }
+
+
 
 .sidebar_show-mob{
     
@@ -514,6 +518,9 @@ body{
         /*width: 33.33%;*/
         width: 45%;
         min-width: 375px;
+        flex-grow: 1;
+        flex-shrink: 5;
+        
         @media (max-width: 1600px){
             width: 40%;
         }
@@ -530,12 +537,13 @@ body{
     .mpage-2st-col{
         
         width: 445px;
-        
+        margin: 0 20px;
 
         @media (max-width: 900px){
             order: 1;
             margin-bottom: 30px;
             width: 100%;
+            margin: 0  0 20px 0;
         }
     }
 
@@ -1087,7 +1095,7 @@ body{
 
 .mpage-3st-col{
     width: 17.8%;
-    min-width: 200px;
+    width: 200px;
 
     @media (max-width: 1120px) {
         display: none;
@@ -1134,6 +1142,14 @@ body{
 .pages-2st-col{
     width: 41.2%;
     min-width: 510px;
+
+
+    flex-grow: 1;
+    margin: 0 20px;
+    @media (max-width: 960px){
+        flex-grow: 0;
+        margin: 0 0px;
+    }
     /*background-color: orangered;*/
 }
 .pages-3st-col{
