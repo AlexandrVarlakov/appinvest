@@ -43,9 +43,9 @@ body{
 
 .content{
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-
+    
+    justify-content: center;
+    width: 100%;
     padding: 33px 50px 0 265px;
 
     @media (max-width: 1380px){
@@ -59,6 +59,12 @@ body{
     @media (max-width: 460px){
         overflow-x: hidden;
     }
+}
+
+
+.main__inner{
+    max-width: 1120px;
+    width: 100%;
 }
 
 .section{
@@ -145,7 +151,10 @@ body{
     }
 }
 .portfolio-row{
-    flex-wrap: wrap;
+    @media (max-width: 960px){
+        flex-wrap: wrap;
+    }
+    
 }
 /* END: Common styles*/
 
@@ -516,8 +525,9 @@ body{
 /* BEGIN: Main page*/
     .mpage-1st-col{
         /*width: 33.33%;*/
-        width: 45%;
-        min-width: 375px;
+        
+        width: 375px;
+        /*
         flex-grow: 1;
         flex-shrink: 5;
         
@@ -527,7 +537,7 @@ body{
         @media (max-width: 1500px){
             width: 33%;
         }
-        
+        */
         @media (max-width: 900px){
             order: 2;
             width: 100%;
