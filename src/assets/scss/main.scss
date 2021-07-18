@@ -1231,7 +1231,7 @@ body{
 .search__icon{
     display: flex;
     align-items: center;
-
+    cursor: pointer;
     @media (max-width: 1120px){
         background-color: #fff;
         min-width: 50px;
@@ -1318,6 +1318,15 @@ body{
 
     @media (max-width: 640px){
         padding: 10px 15px;
+    }
+}
+
+
+.s-index__title-group{
+    display: flex;
+    align-items: center;
+    .company-logo{
+        margin-right: 25px;
     }
 }
 
@@ -1662,12 +1671,335 @@ body{
         flex-direction: column;
     }
 }
+
+.last-page-btn{
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    border-radius: 10px;
+    padding: 0;
+
+    color: #585858;
+    margin-right: 5px;
+    line-height: 20px;
+    letter-spacing: .25px;
+    font-family: $font-montserrat;
+    font-size: 16px;
+}
+
+.last-page-btn__arrow{
+    transform: rotate(90deg);
+}
+.page-card_link{
+    text-decoration: none;
+    padding: 15px 20px;
+}
+.page-card_link-card{
+    text-decoration: none;
+}
+.page-card_link__text{
+    font-family: $font-poppins;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #2D2D2D;
+    margin-top: 20px;
+}
+
+.page-card_link-card{
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+.asset-footer{
+    flex-direction: column;
+    padding: 23px 50px 50px;
+
+    border-radius: 0 0 24px 24px;
+
+    @media(max-width: 640px){
+        padding: 23px 30px 30px;
+    }
+}
+
+.asset-title{
+    font-family: $font-poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.75px;
+    text-align: left;
+    width: 100%;
+    color: #000000;
+}
+
+.asset-text{
+    padding-top: 20px;
+    font-family: $font-poppins;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.75px;
+
+    color: #000000;
+}
+
+.asset-row{
+    padding: 25px 50px;
+    justify-content: space-between;
+
+    @media(max-width: 640px){
+        padding: 25px 30px;
+    }
+}
+
+.asset-chart{
+    padding: 0px 50px;
+    @media(max-width: 640px){
+        padding: 0px 30px;
+    }
+}
+
+.asset-price{
+    font-family: $font-poppins;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+
+    letter-spacing: 0.75px;
+
+    
+    color: #14142B;
+
+
+}
+
+
+.statistic-bought{
+    border-radius: 20px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+    font-family: $font-montserrat;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #373737;
+}
+
+.statistic-bought__count{
+    padding-left: 10px;
+}
+
+.buy-form{
+    padding: 30px 35px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+.buy-form__header{
+    position: relative;
+    padding-bottom: 20px;
+
+    &::after{
+        content: "";
+        opacity: 0.05;
+        height: 1px;
+        width: 193px;
+        background-color: #000;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}
+.buy-form__title{
+    font-family: $font-montserrat;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #373737;
+}
+
+.buy-form__body{
+    padding: 20px 0;
+
+    position: relative;
+    
+    &::after{
+        content: "";
+        opacity: 0.05;
+        height: 1px;
+        width: 193px;
+        background-color: #000;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}
+
+.buy-form__values{
+    
+    font-family: $font-poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+    &:not(:first-of-type){
+        padding-top: 10px;
+    }
+}
+.buy-form__values_count{
+    display: flex;
+}
+.buy-form__arrow-gr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.buy-form__count{
+    margin: 0 4px;
+}
+.buy-form__btn{
+    display: flex;
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+    transition: .5s;
+
+    &:hover{
+        border: 1px solid #AFAFAF;
+    }
+    img{
+        width: 5px;
+        height: 5px;
+    }
+}
+.buy-form__arrow-minus{
+    transform: rotate(180deg);
+}
+
+.buy-form__values_count{
+    padding-top: 10px;
+}
+
+.buy-form__summ{
+    font-family: $font-poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* or 120% */
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.buy-form__summ-value, .buy-form__summ-d{
+
+    font-size: 16px;
+    line-height: 38px;
+
+
+    letter-spacing: 0.75px;
+
+    color: #14142B;
+    
+}
+
+.buy-form__footer{
+    padding-top: 10px;
+}
+
+
+.buy-form__summ-value{
+    padding-left: 10px;
+}
+.buy-form__send{
+    background: linear-gradient(90deg, #6366D9 0%, #A980F8 100%);
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    font-family: $font-poppins;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.last-page-btn_mob{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #fff;
+    @media (max-width: 1120px){
+        display: flex;
+    }
+    order: 1;
+}
+
+.search__icon_asset{
+    @media (max-width: 1120px){
+        order: 3;
+        margin-right: 0;
+    }
+    
+}
+
+.search__form_asset{
+    @media (max-width: 1120px){
+        order: 2;
+        margin: 0 10px;
+    }
+}
+
+.pages-3st-col_asset{
+    @media (max-width: 960px){
+        margin-top: 25px;
+    }
+
+    @media (max-width: 640px){
+        width: 100%;
+    }
+}
 /*
     USED FONTS
 
     Poppins:
         300
         400, bold
+        500
         700, bold
         600
     Montserrat:
